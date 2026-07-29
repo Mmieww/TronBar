@@ -79,7 +79,7 @@ document.addEventListener('DOMContentLoaded', () => {
             ['MILLER', '6 BYN'],
             ['PILSNER', '6 BYN'],
             ['КАЛЕКЦЫЯ МАЙСТРА', '6 BYN'],
-            ['AKAMITAE', '6 BYN'],
+            ['AKСAMITAE', '6 BYN'],
             ['ЛИД БИР ФРЕШ', '6 BYN'],
             ['KORONET', '7 BYN'],
             ['ВИШНЕВЫЙ ЭЛЬ', '8 BYN'],
