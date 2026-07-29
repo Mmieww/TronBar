@@ -1,0 +1,356 @@
+/* ========== style.css ========== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    background: #0a0a0f;
+    background-image: radial-gradient(circle at 20% 30%, #14141e 0%, #050508 100%);
+    color: #e0e0f0;
+    padding: 0.8rem;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.menu-container {
+    max-width: 480px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* ===== ШАПКА ===== */
+.cyber-header {
+    text-align: center;
+    padding: 0.6rem 0 1.2rem;
+    border-bottom: 1px solid #2a2a4a;
+    margin-bottom: 1.5rem;
+}
+
+.cyber-header h1 {
+    font-size: 2.6rem;
+    font-weight: 700;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+    background: linear-gradient(135deg, #b7aaff, #6f8cff, #3cc6ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 0 0 18px rgba(70, 130, 255, 0.25);
+    line-height: 1.1;
+}
+
+.cyber-header .sub {
+    color: #8f8fc7;
+    letter-spacing: 4px;
+    font-size: 0.85rem;
+    border-top: 1px dashed #3c3c6a;
+    display: inline-block;
+    padding-top: 0.3rem;
+}
+
+.city-tag {
+    display: inline-block;
+    background: rgba(60, 60, 140, 0.2);
+    padding: 0.2rem 1.4rem;
+    border-radius: 40px;
+    font-size: 0.7rem;
+    color: #aab;
+    letter-spacing: 1px;
+    border: 1px solid #3a3a6a;
+    margin-top: 0.4rem;
+}
+
+/* ===== АКЦИИ ===== */
+.promo-ribbon {
+    background: rgba(16, 16, 40, 0.75);
+    backdrop-filter: blur(6px);
+    border: 1px solid #3f3f7a;
+    border-radius: 20px;
+    padding: 0.8rem 0.6rem;
+    margin-bottom: 1.8rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.4rem 0.6rem;
+}
+
+.promo-item {
+    background: rgba(0, 0, 0, 0.35);
+    padding: 0.2rem 0.8rem;
+    border-radius: 40px;
+    font-size: 0.7rem;
+    font-weight: 500;
+    border-left: 2px solid #6f8cff;
+    display: flex;
+    align-items: center;
+    gap: 0.2rem;
+}
+
+.promo-item .day { color: #c8d0ff; font-weight: 700; }
+.promo-item .discount { color: #ffd966; background: #2a2a4a; padding: 0.05rem 0.5rem; border-radius: 30px; font-size: 0.65rem; font-weight: 700; }
+.promo-item .desc { color: #b0b0e0; }
+
+/* ===== МЕДИА-БЛОКИ ===== */
+.media-block {
+    border-radius: 18px;
+    overflow: hidden;
+    background: #10101e;
+    border: 1px solid #2d2d5a;
+    margin-bottom: 1.8rem;
+    min-height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.photo-block { border-color: #4a3a7a; }
+.video-block { border-color: #3a6a7a; }
+
+.media-placeholder {
+    width: 100%;
+    padding: 1.8rem 1rem;
+    text-align: center;
+    color: #6a6a9a;
+    background: repeating-linear-gradient(45deg, #14142a 0px, #14142a 20px, #1a1a30 20px, #1a1a30 40px);
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    font-size: 0.9rem;
+}
+
+/* ===== СЕКЦИИ ===== */
+.section {
+    margin-bottom: 1.6rem;
+    background: rgba(10, 10, 22, 0.6);
+    backdrop-filter: blur(2px);
+    border-radius: 20px;
+    padding: 0.8rem 0.8rem 0.3rem;
+    border: 1px solid #24244a;
+}
+
+.section-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    color: #b7c4ff;
+    padding-bottom: 0.4rem;
+    border-bottom: 1px solid #2e2e5a;
+    margin-bottom: 0.6rem;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    flex-wrap: wrap;
+}
+
+.section-title .vol {
+    font-size: 0.7rem;
+    font-weight: 400;
+    color: #7a7aaa;
+    background: #1a1a3a;
+    padding: 0.05rem 0.6rem;
+    border-radius: 30px;
+}
+
+/* ===== ДВЕ КОЛОНКИ (РАЗДЕЛЫ) ===== */
+.two-col-section {
+    padding: 0.6rem 0.6rem 0.2rem;
+}
+
+.two-col-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.6rem;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.sub-section {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    padding: 0.3rem 0.4rem 0.1rem;
+}
+
+.sub-title {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #9aa8e6;
+    padding-bottom: 0.15rem;
+    border-bottom: 1px solid #1a1a3a;
+    margin-bottom: 0.15rem;
+    display: flex;
+    align-items: center;
+    gap: 0.2rem;
+    flex-wrap: wrap;
+}
+
+.sub-title .vol {
+    font-size: 0.6rem;
+    font-weight: 400;
+    color: #6a6a9a;
+    background: #12122a;
+    padding: 0.02rem 0.4rem;
+    border-radius: 30px;
+}
+
+/* ===== ПОЗИЦИИ ВНУТРИ ПОДРАЗДЕЛОВ ===== */
+.item-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 0.05rem;
+}
+
+.item-grid .menu-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 0.15rem 0.1rem 0.15rem 0.2rem;
+    border-bottom: 1px dashed #12122a;
+    font-size: 0.7rem;
+    gap: 0.2rem;
+}
+
+.item-grid .menu-item .item-name {
+    color: #e0e4f5;
+    font-weight: 400;
+    flex: 1;
+    word-break: break-word;
+}
+
+.item-grid .menu-item .item-desc {
+    color: #7a7aaa;
+    font-size: 0.6rem;
+    font-weight: 300;
+    flex: 1;
+    word-break: break-word;
+}
+
+.item-grid .menu-item .item-price {
+    color: #d6daff;
+    background: #1b1b3a;
+    padding: 0.02rem 0.5rem;
+    border-radius: 30px;
+    font-size: 0.65rem;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+/* ===== ПОЛНАЯ ШИРИНА ДЛЯ КОКТЕЙЛЕЙ ===== */
+.item-grid.full-width .menu-item {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 0.78rem;
+    padding: 0.3rem 0.3rem 0.25rem 0.4rem;
+    border-bottom: 1px dashed #1a1a3a;
+}
+
+/* Первая строка: название + цена */
+.item-grid.full-width .menu-item .item-name {
+    font-weight: 600;
+    color: #e8ecff;
+    flex: 0 0 auto;
+    white-space: nowrap;
+}
+
+.item-grid.full-width .menu-item .item-price {
+    flex: 0 0 auto;
+    font-size: 0.75rem;
+    padding: 0.05rem 0.7rem;
+    background: #1b1b3a;
+    border-radius: 30px;
+    color: #d6daff;
+    margin-left: auto;
+}
+
+/* Вторая строка: состав на всю ширину */
+.item-grid.full-width .menu-item .item-desc {
+    flex: 1 1 100%;
+    font-size: 0.7rem;
+    color: #8a8aba;
+    padding-left: 0;
+    margin-top: 0.05rem;
+    word-break: break-word;
+    order: 3; /* Убеждаемся, что состав всегда после названия и цены */
+}
+
+/* ===== ЦЕНА СПРАВА ДЛЯ КОКТЕЙЛЕЙ ===== */
+.item-grid.price-right .menu-item {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0.3rem 0.3rem 0.25rem 0.4rem;
+    border-bottom: 1px dashed #1a1a3a;
+}
+
+/* Первая строка: название + цена */
+.item-grid.price-right .menu-item .item-name {
+    flex: 0 0 auto;
+    font-weight: 600;
+    color: #e8ecff;
+    white-space: nowrap;
+}
+
+.item-grid.price-right .menu-item .item-price {
+    flex: 0 0 auto;
+    font-size: 0.75rem;
+    padding: 0.05rem 0.7rem;
+    background: #1b1b3a;
+    border-radius: 30px;
+    color: #d6daff;
+    margin-left: auto;
+}
+
+/* Вторая строка: состав на всю ширину */
+.item-grid.price-right .menu-item .item-desc {
+    flex: 1 1 100%;
+    font-size: 0.7rem;
+    color: #8a8aba;
+    padding-left: 0;
+    margin-top: 0.05rem;
+    word-break: break-word;
+    order: 3;
+}
+
+/* ===== ДЛЯ СНЭКОВ И ЕДЫ ===== */
+.two-col-section .col .section-title {
+    font-size: 1rem;
+    border-bottom: 1px solid #2e2e5a;
+    margin-bottom: 0.4rem;
+    padding-bottom: 0.3rem;
+}
+
+.two-col-section .item-grid .menu-item {
+    font-size: 0.72rem;
+    padding: 0.2rem 0.2rem 0.2rem 0.3rem;
+    border-bottom: 1px dashed #12122a;
+}
+
+/* ===== ФУТЕР ===== */
+.footer-note {
+    text-align: center;
+    margin-top: 1.5rem;
+    padding: 1rem 0.5rem;
+    color: #5f5f8f;
+    border-top: 1px solid #22224a;
+    font-size: 0.75rem;
+    letter-spacing: 0.5px;
+}
+
+/* ===== ТОЛЬКО МОБИЛЬНЫЕ ===== */
+@media (min-width: 769px) {
+    body {
+        padding: 1rem;
+        background: #0a0a0f;
+    }
+    .menu-container {
+        max-width: 420px;
+        margin: 0 auto;
+    }
+}
