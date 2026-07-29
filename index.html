@@ -1,0 +1,250 @@
+<!-- ========== index.html ========== -->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <title>Меню | Бар Трон · Гродно</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="menu-container">
+
+        <!-- ===== ШАПКА ===== -->
+        <header class="cyber-header">
+            <h1>TRON</h1>
+            <div class="sub">CYBERLOUNGE</div>
+            <div class="city-tag">ГРОДНО</div>
+        </header>
+
+        <!-- ===== АКЦИИ ===== -->
+        <div class="promo-ribbon">
+            <div class="promo-item"><span class="day">ПН</span> <span class="discount">−30%</span> <span class="desc">виски</span></div>
+            <div class="promo-item"><span class="day">ВТ</span> <span class="discount">−50%</span> <span class="desc">классические коктейли</span></div>
+            <div class="promo-item"><span class="day">СР</span> <span class="discount">−50%</span> <span class="desc">авторские коктейли</span></div>
+            <div class="promo-item"><span class="day">ЧТ</span> <span class="discount">−50%</span> <span class="desc">сеты наливок</span></div>
+            <div class="promo-item"><span class="day">ДАРТС</span> <span class="desc">выигрывай у бармена и получи второй коктейль бесплатно</span></div>
+        </div>
+
+        <!-- ===== ФОТО 1 ===== -->
+        <div class="media-block photo-block">
+            <div class="media-placeholder">
+                <video width="100%" height="auto" autoplay muted loop playsinline>
+                    <source src="1.MOV" type="video/mp4">
+                    Ваш браузер не поддерживает видео.
+                </video>
+            </div>
+        </div>
+
+        <!-- ===== КРЕПКИЙ АЛКОГОЛЬ (2 колонки) ===== -->
+        <div class="section two-col-section">
+            <h2 class="section-title">КРЕПКИЙ АЛКОГОЛЬ</h2>
+            <div class="two-col-grid">
+                <!-- Левая колонка -->
+                <div class="col">
+                    <div class="sub-section">
+                        <h3 class="sub-title">ВИСКИ <span class="vol">40 мл</span></h3>
+                        <div class="item-grid" id="whiskey"></div>
+                    </div>
+                    <div class="sub-section">
+                        <h3 class="sub-title">ДЖИН <span class="vol">40 мл</span></h3>
+                        <div class="item-grid" id="gin"></div>
+                    </div>
+                    <div class="sub-section">
+                        <h3 class="sub-title">ТЕКИЛА <span class="vol">40 мл</span></h3>
+                        <div class="item-grid" id="tequila"></div>
+                    </div>
+                    <div class="sub-section">
+                        <h3 class="sub-title">ВОДКА <span class="vol">40 мл</span></h3>
+                        <div class="item-grid" id="vodka"></div>
+                    </div>
+                    <div class="sub-section">
+                        <h3 class="sub-title">КОНЬЯК <span class="vol">40 мл</span></h3>
+                        <div class="item-grid" id="cognac"></div>
+                    </div>
+                </div>
+                <!-- Правая колонка -->
+                <div class="col">
+                    <div class="sub-section">
+                        <h3 class="sub-title">РОМ <span class="vol">40 мл</span></h3>
+                        <div class="item-grid" id="rum"></div>
+                    </div>
+                    <div class="sub-section">
+                        <h3 class="sub-title">ВЕРМУТ &amp; ЛИКЁРЫ <span class="vol">40 мл</span></h3>
+                        <div class="item-grid" id="liqueur"></div>
+                    </div>
+                    <div class="sub-section">
+                        <h3 class="sub-title">АБСЕНТ <span class="vol">30 мл</span></h3>
+                        <div class="item-grid" id="absinthe"></div>
+                    </div>
+                    <div class="sub-section">
+                        <h3 class="sub-title">НАЛИВКИ <span class="vol">40 мл</span></h3>
+                        <div class="item-grid" id="liqueurs"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== ФОТО 2 ===== -->
+        <div class="media-block photo-block">
+            <div class="media-placeholder">
+                <video width="100%" height="auto" autoplay muted loop playsinline>
+                    <source src="2.MOV" type="video/mp4">
+                    Ваш браузер не поддерживает видео.
+                </video>
+            </div>
+        </div>
+
+        <!-- ===== ПИВО (2 колонки) ===== -->
+        <div class="section two-col-section">
+            <h2 class="section-title">ПИВО</h2>
+            <div class="two-col-grid">
+                <div class="col">
+                    <div class="sub-section">
+                        <h3 class="sub-title">РАЗЛИВНОЕ <span class="vol">0.5 л</span></h3>
+                        <div class="item-grid" id="draft-beer"></div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="sub-section">
+                        <h3 class="sub-title">БУТЫЛОЧНОЕ</h3>
+                        <div class="item-grid" id="bottled-beer"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== АВТОРСКИЕ КОКТЕЙЛИ (полная ширина, цена справа) ===== -->
+        <section class="section">
+            <h2 class="section-title">АВТОРСКИЕ КОКТЕЙЛИ</h2>
+            <div class="item-grid full-width price-right" id="author-cocktails"></div>
+        </section>
+
+        <!-- ===== ФОТО 3 ===== -->
+        <div class="media-block photo-block">
+            <div class="media-placeholder">
+                <video width="100%" height="auto" autoplay muted loop playsinline>
+                    <source src="3.MOV" type="video/mp4">
+                    Ваш браузер не поддерживает видео.
+                </video>
+            </div>
+        </div>
+
+        <!-- ===== КЛАССИЧЕСКИЕ КОКТЕЙЛИ (полная ширина, цена справа) ===== -->
+        <section class="section">
+            <h2 class="section-title">КЛАССИЧЕСКИЕ КОКТЕЙЛИ</h2>
+            <div class="item-grid full-width price-right" id="classic-cocktails"></div>
+        </section>
+
+        <!-- ===== ШОТЫ (полная ширина, цена справа) ===== -->
+        <section class="section">
+            <h2 class="section-title">ШОТЫ</h2>
+            <div class="item-grid full-width price-right" id="shots"></div>
+        </section>
+
+        <!-- ===== ВИДЕО 3 ===== -->
+        <div class="media-block video-block">
+            <div class="media-placeholder">
+                <video width="100%" height="auto" autoplay muted loop playsinline>
+                    <source src="IMG_1672.MP4" type="video/mp4">
+                    Ваш браузер не поддерживает видео.
+                </video>
+            </div>
+        </div>
+
+        <!-- ===== ПУНШ ===== -->
+        <section class="section">
+            <h2 class="section-title">ПУНШ <span class="vol">4 л</span></h2>
+            <div class="item-grid full-width price-right" id="punch"></div>
+        </section>
+
+        <!-- ===== КАЛЬЯН ===== -->
+        <section class="section">
+            <h2 class="section-title">КАЛЬЯН</h2>
+            <div class="item-grid full-width" id="hookah"></div>
+        </section>
+
+        <!-- ===== ФОТО 4 ===== -->
+        <div class="media-block photo-block">
+            <div class="media-placeholder">
+                <img src="725860027_17977106919041726_407087935219257205_n.jpg" alt="Фото бара Трон" style="width:100%; height:auto; display:block;">
+            </div>
+        </div>
+
+        <!-- ===== КОФЕ И ЧАЙ (2 колонки) ===== -->
+        <div class="section two-col-section">
+            <h2 class="section-title">КОФЕ И ЧАЙ</h2>
+            <div class="two-col-grid">
+                <div class="col">
+                    <div class="sub-section">
+                        <h3 class="sub-title">КОФЕ</h3>
+                        <div class="item-grid" id="coffee-short"></div>
+                    </div>
+                    <div class="sub-section">
+                        <h3 class="sub-title">ЧАЙ</h3>
+                        <div class="item-grid" id="tea"></div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="sub-section">
+                        <h3 class="sub-title">СИРОП</h3>
+                        <div class="item-grid" id="syrup"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== НАПИТКИ (2 колонки) ===== -->
+        <div class="section two-col-section">
+            <h2 class="section-title">НАПИТКИ</h2>
+            <div class="two-col-grid">
+                <div class="col">
+                    <div class="sub-section">
+                        <h3 class="sub-title">ГАЗИРОВКА</h3>
+                        <div class="item-grid" id="soda"></div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="sub-section">
+                        <h3 class="sub-title">ЭНЕРГЕТИКИ</h3>
+                        <div class="item-grid" id="energy"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== СНЭКИ + ЕДА (2 колонки) ===== -->
+        <div class="section two-col-section">
+            <div class="two-col-grid">
+                <div class="col">
+                    <h2 class="section-title" style="font-size:1rem; border-bottom-color:#2e2e5a;">СНЭКИ</h2>
+                    <div class="item-grid" id="snacks"></div>
+                </div>
+                <div class="col">
+                    <h2 class="section-title" style="font-size:1rem; border-bottom-color:#2e2e5a;">ЕДА</h2>
+                    <div class="item-grid" id="food"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== ФОТО 5 ===== -->
+        <div class="media-block photo-block">
+            <div class="media-placeholder">
+                <img src="photo_2026-07-29_14-20-45.jpg" alt="Фото бара Трон" style="width:100%; height:auto; display:block;">
+            </div>
+        </div>
+
+        <!-- ===== ЛИМОНАДЫ (полная ширина, цена справа) ===== -->
+        <section class="section">
+            <h2 class="section-title">ЛИМОНАДЫ</h2>
+            <div class="item-grid full-width price-right" id="lemonades"></div>
+        </section>
+
+        <footer class="footer-note">
+            ⚡ ПО СРЕДАМ -50% на авторские коктейли · 18+
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
