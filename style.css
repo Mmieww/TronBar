@@ -332,6 +332,17 @@ body {
     border-bottom: 1px dashed #12122a;
 }
 
+/* ===== СТИЛИ ДЛЯ СТАРОЙ И НОВОЙ ЦЕНЫ ===== */
+.old-price {
+    text-decoration: line-through;
+    color: #777;
+    margin-right: 5px;
+}
+.new-price {
+    color: #ffd966;
+    font-weight: bold;
+}
+
 /* ===== ФУТЕР ===== */
 .footer-note {
     text-align: center;
