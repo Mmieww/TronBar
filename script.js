@@ -216,21 +216,105 @@ document.addEventListener('DOMContentLoaded', () => {
         ]
     };
 
+    // ===== КОНФИГУРАЦИЯ АКЦИЙ ПО ДНЯМ НЕДЕЛИ =====
+    // 0 – воскресенье, 1 – понедельник, 2 – вторник, 3 – среда, 4 – четверг, 5 – пятница, 6 – суббота
+    const dayDiscounts = {
+        1: { // ПН
+            category: 'whiskey',
+            discount: 0.3,          // -30%
+            applyToAll: true,
+            filter: null
+        },
+        2: { // ВТ
+            category: 'classic-cocktails',
+            discount: 0.5,          // -50%
+            applyToAll: true,
+            filter: null
+        },
+        3: { // СР
+            category: 'author-cocktails',
+            discount: 0.5,
+            applyToAll: true,
+            filter: null
+        },
+        4: { // ЧТ
+            category: 'liqueurs',
+            discount: 0.5,
+            applyToAll: false,
+            filter: (name) => name.includes('СЕТ')   // только сеты
+        }
+    };
+
+    const today = new Date().getDay(); // 0-6
+    const todayDiscount = dayDiscounts[today] || null;
+
+    // ===== ВСПОМОГАТЕЛЬНЫЕ ФУНКЦИИ =====
+    function getDiscountedPrice(priceStr, discount) {
+        const num = parseFloat(priceStr);
+        if (isNaN(num)) return priceStr;
+        // округляем до целого (в BYN копеек нет)
+        const newNum = Math.round(num * (1 - discount));
+        return newNum + ' BYN';
+    }
+
+    // ===== РЕНДЕРИНГ =====
     function render(id, items) {
         const container = document.getElementById(id);
         if (!container) return;
 
+        let discountInfo = null;
+        if (todayDiscount && todayDiscount.category === id) {
+            discountInfo = todayDiscount;
+        }
+
         let html = '';
         items.forEach(item => {
+            const name = item[0];
+            const desc = item.length === 3 ? item[1] : '';
+            const price = item.length === 3 ? item[2] : item[1];
+
+            let applyDiscount = false;
+            let newPrice = price;
+
+            if (discountInfo) {
+                if (discountInfo.applyToAll) {
+                    applyDiscount = true;
+                } else if (discountInfo.filter && discountInfo.filter(name)) {
+                    applyDiscount = true;
+                }
+                if (applyDiscount) {
+                    newPrice = getDiscountedPrice(price, discountInfo.discount);
+                }
+            }
+
+            // Формируем HTML
+            let priceHtml = '';
+            if (applyDiscount) {
+                priceHtml = `<span class="item-price">
+                                <span class="old-price">${price}</span>
+                                <span class="new-price">${newPrice}</span>
+                            </span>`;
+            } else {
+                priceHtml = `<span class="item-price">${price}</span>`;
+            }
+
             if (item.length === 2) {
-                html += `<div class="menu-item"><span class="item-name">${item[0]}</span><span class="item-price">${item[1]}</span></div>`;
-            } else if (item.length === 3) {
-                html += `<div class="menu-item"><span class="item-name">${item[0]}</span><span class="item-desc">${item[1]}</span><span class="item-price">${item[2]}</span></div>`;
+                html += `<div class="menu-item">
+                            <span class="item-name">${name}</span>
+                            ${priceHtml}
+                        </div>`;
+            } else {
+                html += `<div class="menu-item">
+                            <span class="item-name">${name}</span>
+                            <span class="item-desc">${desc}</span>
+                            ${priceHtml}
+                        </div>`;
             }
         });
         container.innerHTML = html;
     }
 
+    // ===== ЗАПУСК =====
     Object.keys(menu).forEach(key => render(key, menu[key]));
-    console.log('Меню Трон загружено');
+    console.log('Меню Трон загружено, день недели:', today);
 });
